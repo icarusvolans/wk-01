@@ -1,0 +1,25 @@
+class Main {
+
+    private int tmpA = 2500;
+    private String tmpB = "500";
+
+
+    public static void main(String[] args) {
+        Main m = new Main(); //need because static to get tmpA, tmpB
+        int tB = Integer.parseInt (m.tmpB);
+        
+        long result = lcd((long)m.tmpA,(long)tB);
+        System.out.print("RESULT: " + result);
+
+    }
+
+    public static long lcd(long a, long b) {
+        while (b > 0) {
+            long temp = b;
+            b = a % b; // % is remainder
+            a = temp;
+        }
+        return a;
+    }
+    
+}

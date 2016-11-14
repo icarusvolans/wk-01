@@ -1,0 +1,61 @@
+class Main {
+    
+    public static void main(String[] args) {
+        int[] stock_price = {30, 6, 25, 99, 4, 33};
+        Main m = new Main();
+        int maxProfit = m.getMaxProfit(stock_price);
+        System.out.println(maxProfit);
+    }
+        
+    public int getMaxProfit(int[] stock_price1){
+        int max = stock_price1[0];
+        int min = stock_price1[0];
+        
+        for(int i = 1; i < stock_price1.length ; i++) { 
+            if(stock_price1[i] > max)
+                max = stock_price1[i];
+        }
+
+        for(int i = 1; i < stock_price1.length ; i++) { 
+            if(stock_price1[i] < min)
+                min = stock_price1[i];
+        }
+        System.out.println(max);
+        System.out.println(min);
+        return max - min;
+    }
+}
+
+
+class Main {
+
+    int[] stock_price = {30, 6, 25, 99, 4, 33};
+    
+    public static void main(String[] args) {
+        Main m = new Main();
+        int maxProfit = m.getMaxProfit();
+        System.out.println(maxProfit);
+    }
+        
+    public int getMaxProfit(){
+        int max = stock_price[0];
+        int min = stock_price[0];
+        
+        for(int i = 1; i < stock_price.length ; i++) { 
+            if(stock_price[i] > max)
+                max = stock_price[i];
+        }
+
+        for(int i = 1; i < stock_price.length ; i++) { 
+            if(stock_price[i] < min)
+                min = stock_price[i];
+        }
+        System.out.println(max);
+        System.out.println(min);
+        return max - min;
+    }
+}
+
+
+
+

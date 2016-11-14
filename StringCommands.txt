@@ -1,0 +1,52 @@
+class Main {
+    
+    
+    
+    public static void main(String[] args) {
+        String name = "Java is cool ";
+        char charat10 = name.charAt(10);
+        System.out.println(charat10);
+        char charat0 = name.charAt(0);
+        System.out.println(charat0);
+        char charat5 = name.charAt(5);
+        System.out.println(charat5);
+        
+        boolean xis = name.contains("is");
+        boolean xCool = name.contains("Cool");
+        System.out.println(xis);
+        System.out.println(xCool);
+        
+        boolean EQUALS = name.equals("JAVA IS COOL ");
+        boolean equals = name.equalsIgnoreCase("JAVA IS COOL ");
+        System.out.println(EQUALS);
+        System.out.println(equals);
+        
+        int oindex = name.indexOf('o');
+        int a3index = name.indexOf("a",7);
+        System.out.println(oindex);
+        System.out.println(a3index);
+        
+        System.out.println(name.replace('J', 'K'));
+        
+        boolean starts = name.startsWith("J");
+        boolean ends = name.endsWith("L");
+        System.out.println(starts);
+        System.out.println(ends);        
+         
+        System.out.println(name.substring(2));
+        System.out.println(name.substring(0,4));
+        
+        System.out.println(name.toLowerCase());
+        System.out.println(name.toUpperCase());        
+        
+        System.out.println("Trim: " + name.trim());
+        
+        System.out.println(name.trim().replace("o","--").toUpperCase());
+        
+        
+        StringBuilder str = new StringBuilder("java is");
+        System.out.println( );
+        
+	StringBuilder str = new StringBuilder("java is");
+        System.out.println(str.append(" cool ").delete(0,1).deleteCharAt(0).insert(0, "Ka").reverse().toString());
+

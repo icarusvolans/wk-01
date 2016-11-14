@@ -1,0 +1,41 @@
+import java.util.*;
+
+class Main {
+ 
+//        java stock_prices 21 44 305 59; need to convert args, which is a String, to integers
+        
+        public static void main(String[] args) {
+            
+            String[] testArray = new String[5];
+            testArray[0] = "3";
+            testArray[1] = "7";            
+            testArray[2] = "5";
+            testArray[3] = "9";
+            testArray[4] = "4";            
+            
+            ArrayList<Integer> stock_prices = new ArrayList<>();
+        
+            for (int i = 0; i< testArray.length; i++){
+            // for (int i = 1, i<= args.length;i++)
+                stock_prices.add(Integer.parseInt(testArray[i]));
+            
+            //add code
+            }
+            System.out.println(get_max_profit(stock_prices));
+        }
+    public static int get_max_profit(ArrayList<Integer> stock) {
+        //int maxValue = stock[0];
+        Collections.sort(stock);
+        for (int i = 0; i<stock.size(); i++){
+                System.out.println(stock);
+        }
+//        int minValue = stock[0]; if this were an array
+        int minValue = stock.get(0);
+        int maxValue = stock.get(stock.size() - 1);
+        
+//        return (stock.get(stock.size() - 1)) - stock(0);//since this is an arraylist
+        
+        return maxValue - minValue;
+
+    }
+}

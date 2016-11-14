@@ -1,0 +1,11 @@
+class Main {
+
+    String str = "1";
+
+    public static void main(String[] args) {
+        Main m = new Main(); //need because static to get tmpA, tmpB
+        double str = Double.parseDouble (m.str);
+        System.out.println(str);
+    }
+}
+

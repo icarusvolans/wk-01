@@ -1,0 +1,20 @@
+class Main {
+
+public static void main(String[] args) {
+    int size = 9;    // size of the board
+    int fullSize = 81;
+    String str = "";
+    String strMain = "";
+    for(int i=0; i<fullSize; i++){ //row
+
+        str = (i % size ==  0 ? "\n" : " ") + (i % size == 0 ? "H": (i % size == 8 ? "H" : (i % fullSize < 45 ? ((i % fullSize > 36) ? "H" : " ") : " ")));
+ 
+       System.out.print(str);
+
+        }
+
+    }
+
+    
+}
+

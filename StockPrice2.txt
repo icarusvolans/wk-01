@@ -1,0 +1,37 @@
+class Main {
+
+    int[] stock_price = {30, 6, 25, 99, 4, 33};
+    
+    public static void main(String[] args) {
+        Main m = new Main();
+        int maxProfit = m.getMaxProfit();
+        System.out.println("Max Profit: " + maxProfit);
+    }
+        
+    public int getMaxProfit(){
+
+/*        for(int i = 1; i < stock_price.length ; i++) { 
+            if(stock_price[i] < min)
+                min = stock_price[i];
+*/        int minIndex = 0;
+          int maxSell = 0;
+          int minPurchase = 0;
+
+                for(int i = 0; i < stock_price.length ; i++) { 
+                    if(minIndex == 0 || stock_price[i] < stock_price[minIndex]) {
+                        minIndex = i;
+                        minPurchase = stock_price[i];
+                    }
+             }
+       for(int i = minIndex; i < stock_price.length ; i++) { 
+            if(stock_price[i] > maxSell)
+                maxSell = stock_price[i];
+        
+        }
+        System.out.println(maxSell);
+        System.out.println(minPurchase);
+        System.out.println(minIndex);
+        return maxSell - minPurchase;
+    }
+}
+

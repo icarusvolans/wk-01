@@ -1,0 +1,10 @@
+
+	long time = System.currentTimeMillis();
+        System.out.println((int)time);
+
+
+    System.out.println("Hello World!");
+    short x = 1 ;
+    float y = 6.0f;
+    double z = 5.0;
+    System.out.println(x*y/z);

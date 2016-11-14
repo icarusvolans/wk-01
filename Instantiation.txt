@@ -1,0 +1,21 @@
+public class Swan {
+
+  static int count = 8;
+
+  public Swan() {
+    count = 12;
+  }
+
+  private void Swan() {
+     count = 3;
+  }
+
+  public static void main(String args[]) {
+
+      System.out.println("count 8: " + count);
+      Swan s = new Swan();
+      System.out.println("count 12: " + s.count);
+              s.Swan();
+      System.out.println("count 3: " + count);
+  }
+}

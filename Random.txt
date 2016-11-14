@@ -1,0 +1,19 @@
+import java.util.Random;
+
+public class Main {
+    int min = 7;
+    int max = 23;
+
+    public static void main(String... args) {
+        Main m = new Main();
+    
+      //call the randomInt() method
+        System.out.println(randomInt(m.min, m.max));
+   }
+
+    public static int randomInt(int min, int max) {
+        return (int) (Math.random()*(max-min))+min;
+    }
+
+}
+
